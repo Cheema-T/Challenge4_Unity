@@ -8,8 +8,8 @@ public class SpawnManagerX : MonoBehaviour
     public GameObject powerupPrefab;
 
     private float spawnRangeX = 10;
-    private float spawnZMin = 15; // set min spawn Z
-    private float spawnZMax = 25; // set max spawn Z
+    private float spawnZMin = 15; 
+    private float spawnZMax = 25; 
 
     public int enemyCount;
     public int waveCount = 1;
@@ -41,10 +41,10 @@ public class SpawnManagerX : MonoBehaviour
 
     void SpawnEnemyWave(int enemiesToSpawn)
     {
-        Vector3 powerupSpawnOffset = new Vector3(0, 0, -15); // make powerups spawn at player end
+        Vector3 powerupSpawnOffset = new Vector3(0, 0, -15); 
 
         // If no powerups remain, spawn a powerup
-        if (GameObject.FindGameObjectsWithTag("Powerup").Length == 0) // check that there are zero powerups
+        if (GameObject.FindGameObjectsWithTag("Powerup").Length == 0) 
         {
             Instantiate(powerupPrefab, GenerateSpawnPosition() + powerupSpawnOffset, powerupPrefab.transform.rotation);
         }
